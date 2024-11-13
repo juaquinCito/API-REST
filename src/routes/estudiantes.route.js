@@ -1,4 +1,4 @@
-import EstudiantesController from "../controllers/estudiantes.controller"
+import EstudiantesController from "../controllers/estudiantes.controller.js"
 import express from "express"
 
 class EstudiantesRoutes {
@@ -8,9 +8,9 @@ class EstudiantesRoutes {
     }
 
     start() {
-        this.router.get("/words", this.controller.getEstudiantes)
-        this.router.post("/words", this.controller.postEstudiantes)
-        this.router.patch("/words/update/:nombre", this.controller.patchEstudiantes)
+        this.router.get("/estudiantes", this.controller.getEstudiantes)
+        this.router.post("/estudiantes", this.controller.postEstudiantes)
+        this.router.patch("/estudiantes/update/:nombre", this.controller.patchEstudiantes)
 
         return this.router
     }
